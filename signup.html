@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+		<link rel="stylesheet" type="text/css" href="css/signup.css">
+    </head>
+<body>
+	<div class="header"></div>
+	<div class="container">
+        <div class="form">
+        
+            <form action="signup_action.php" method="POST" onsubmit="return validation()">
+            
+                <h1>Sign Up</h1>
+				<p>FullName</p>
+                <input type="text" name="fname" placeholder="" name="" size="40" id="fulln" autocomplete="off">
+				<br><span id="fn" style="color:red"></span>
+				<p>UserName</p>              
+				<input type="text" name="uname" placeholder="" name="" size="40" id="usern">
+				<br><span id="un" style="color:red"></span>
+				<p>Password</p>
+                <input type="password" name="pname" placeholder="" name="" size="40" id="passn">
+				<br><span id="p" style="color:red"></span>
+				<p>ConfirmPassword</p>
+                <input type="password" name="pname" placeholder="" name="" size="40" id="cpassn">
+				<br><span id="cp" style="color:red"></span>
+				
+				<p>Mobile No</p>
+				<input type="text"name="mname" placeholder="+880" name"" size="40" id="mobilen">
+				<br><span id="m" style="color:red"></span>
+				<p>Email</p>
+				<input type="email" name="ename" placeholder="" name="" size="40" id="emailn">
+				<br><span id="e" style="color:red"></span>
+				<p>Address</p>
+				<input type="text" name="aname" placeholder="" size="40" id="addressn">
+				<br><span id="a" style="color:red"></span>
+				<br>
+                <input type="submit" name="submit" value="Submit"  style="margin-left:40%;font-size:18px"><br>
+				
+            </form>
+					<script type="text/javascript">
+						function validation(){
+							var fullname= document.getElementById('fulln').value;
+							var user= document.getElementById('usern').value;
+							var pass= document.getElementById('passn').value;
+							var cpass= document.getElementById('cpassn').value;
+							var mobile= document.getElementById('mobilen').value;
+							var emailv= document.getElementById('emailn').value;
+							var addressv= document.getElementById('addressn').value;
+							if(fullname == ""){
+									document.getElementById('fn').innerHTML="***Please fillup FullName";
+									return false;
+							}
+								if((fullname.length<=4) ||(fullname.length >25)){
+									document.getElementById('fn').innerHTML="***Fullname must be between 5 to 25";
+									return false;
+								}
+								if(!isNaN(fullname)){
+									document.getElementById('fn').innerHTML="***Only Character Allowed";
+									return false;
+								}
+								
+							if(user == ""){
+									document.getElementById('un').innerHTML="***Please fillup UserName";
+									return false;
+							}
+								if((user.length<=2) ||(user.length >10)){
+									document.getElementById('un').innerHTML="**Username must be between 3 to 10";
+									return false;
+								}
+								if(!isNaN(user)){
+									document.getElementById('un').innerHTML="***Only Character Allowed";
+									return false;
+								}
+							if(pass == ""){
+									document.getElementById('p').innerHTML="***Please fillup password";
+									return false;		
+							}
+								if((pass.length<=4) ||(pass.length >10)){
+									document.getElementById('p').innerHTML="**Password must be between 5 to 10";
+									return false;
+								}
+								
+							if(cpass == ""){
+									document.getElementById('cp').innerHTML="**Please fillup ConfirmPassword";
+									return false;
+							}
+								if(pass!=cpass){
+									document.getElementById('cp').innerHTML="**Password Not Match";
+									return false;
+								}
+							
+							if(mobile == ""){
+									document.getElementById('m').innerHTML="***Please fillup Mobile No";
+									return false;
+							}
+								if(isNaN(mobile)){
+									document.getElementById('m').innerHTML="***Only Digits Allowed";
+									return false;
+								}
+								if(mobile.length<11){
+									document.getElementById('m').innerHTML="**Please Enter 11 digit Numbers";
+									return false;
+								}
+							if(emailv == ""){
+									document.getElementById('e').innerHTML="***Please fillup Email";
+									return false;
+							}
+							if(addressv == ""){
+									document.getElementById('a').innerHTML="***Please fillup Address";
+									return false;
+							}
+						}
+					</script>
+        </div>
+	</div>
+	<div class="footer"></div>
+    </body>	
+</html>	

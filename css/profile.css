@@ -1,0 +1,167 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+body{
+	//background: url(image/image14.jpg)no-repeat;
+	background-color:#f9f9f9;
+}
+.home{
+	background-color:#333;
+	color:white;
+	height:60px;
+	width:100%;
+	font-size:24px;
+	text-align:center;
+	padding-top:30px;
+}
+.home a{
+	color:white;
+	text-decoration:none;
+	
+}.home .h{
+	margin-left:12%;
+}
+.home .f{
+	margin-left:10%;
+	
+}
+.home .l{
+	color:red;
+	margin-left:10%;
+}
+.mid{
+	height:823px;
+	width:100%;
+}
+.footer{
+	background-color:#333;
+	height:45px;
+	width:100%;
+	text-align:center;
+	padding-top:20px;
+	color:white;
+}
+.menu{
+	width:20%:
+	height:300px;
+}
+
+#check{
+	display:none;
+}
+#icone{
+	cursor:pointer;
+	padding:12px;
+	position:absolute;
+	z-index:1;
+	
+}
+.bar{
+	background-color: #333;
+	height: 822px;
+	width:20%;
+	position:absolute;
+	transition: all .2s linear;
+	left:-300px;
+	
+}
+nav{
+	width:100%;
+	position:absolute;
+	top:60px;
+}
+nav a{
+	text-decoration: none;
+}
+.link{
+	background-color:494950;
+	padding:20px;
+	font-family:'Arial';
+	font-size:13px;
+	transition:all .2s linear;
+	color: #f4f4f9;
+	border-bottom:2px solid #222;
+	opacity: 0;
+	
+}
+.link:hover{
+	background-color:#050542;
+	display:block;
+}
+#check:checked ~ .bar{
+	transform: translateX(300px);
+}
+#check:checked ~ .bar nav a .link{
+	opacity: 1;
+	margin-top:0;
+	transition-delay: .2s;
+}
+.sub-arrow:after{
+	content:'\203A';
+	float: right;
+	margin-right: 20px;
+	transform: rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+}
+.bar li:hover .sub-arrow:after{
+	content: '\2039';
+}
+ul li ul li a{
+	padding:10px;
+	text-align:center;
+	text-decoration: none;
+	color:white;
+	display:block;
+}
+ul li ul li a:hover{
+	background-color:green;
+}
+ul li ul li{
+	display:none;
+}
+ul li:hover ul li{
+	display:block;
+}
+
+.rightside{
+	float: right;
+	width:6%;
+	overflow: hidden;
+	top:25%;
+	margin-top:70px;
+}
+.rightside li{
+	list-style-type: none;
+	padding:15px;
+	transition: .6s;
+	color:white;
+	position: relative;
+	cursor:pointer;
+}
+.rightside li a{
+	font-size: 40px;
+	color: white;
+	text-decoration: none;
+}
+.rightside li:hover{
+	padding: 15px 30px;
+}
+.rightside li:nth-child(1){
+	background: #3b5998;
+}
+.rightside li:nth-child(2){
+	background: #00aced;
+}
+.rightside li:nth-child(3){
+	background: #dd4b39;
+}
+.rightside li:nth-child(4){
+	background: #007bb6;
+}
+.rightside li:nth-child(5){
+	background: #cb2017;
+}
+
